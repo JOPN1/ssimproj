@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSIM Calendar 2025</title>
+
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+   <!-- FullCalendar CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+
+   <!-- close calender -->
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet"/>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- header section start -->
+
+  <header class="header_section"
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a href="index.html" class="navbar-brand">
+  
+      <div class="" id="">
+        <div class="custom_menu-btn">
+          <button onclick="openNav()">
+          <span class="s-1"></span>
+          <span class="s-2"></span>
+          <span class="s-3"></span>
+        </button>
+        <div class="overlay" id="myNav">
+          <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="message.html">Sermons</a>
+            <a href="give.html">Give</a>
+            <a href="reachout.html">ContactUs</a>
+            <a href="calender.html">Calender</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- End of header section -->
+
+
+    <section class="calendar-section">
+        <div class="container">
+            <h1 class="text-primary">SSIM CALENDAR 2025</h1>
+            <div id="churchCalendar"></div>
+        </div>
+    </section>
+
+
+     <!-- start of footer -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_content">
+            <h4>Reach us at...</h4>
+            <div class="contact_link_box">
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>Location</span></a>
+              <a href=""><i class="fa fa-phone" aria-hidden="true"></i>
+              <span>Call +234 922342344</span></a>
+              <a href=""><i class="fa fa-envelop" aria-hidden="true"></i>
+              <span>ssim@gmail.com</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              <img src="./images/SSIM WHITE.png" height="50px" width="50px" alt="">
+            </a>
+            <p>follow our socials to stay connected from far and near </p>
+            <div class="footer_social">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="displayYear"></span>All Rights Reserved By
+        <a href="#">SSIM</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer section -->
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+
+    <!-- Bootstrap JS (Required for some features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('churchCalendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: window.innerWidth < 768 ? 'listMonth' : 'dayGridMonth', 
+                height: '75vh', // Makes it fit within the section
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: window.innerWidth < 768 ? 'listMonth' : 'dayGridMonth,listMonth'
+                },
+                events: [
+                    { title: 'New Year Service', start: '2025-01-01' },
+                    { title: 'Digging Deep', start: '2025-02-04' },
+                    { title: 'Faith Clinic', start: '2025-02-06' },
+                    { title: 'Holy Communion', start: '2025-02-07' },
+                    { title: 'SOD Executive Class', start: '2025-02-11', end: '2025-02-15' },
+                    { title: 'Annual Convention', start: '2025-02-23' },
+                    { title: 'Palm Sunday', start: '2025-03-30' },
+                    { title: 'Easter Sunday', start: '2025-04-20' },
+                    { title: 'Youth Convention', start: '2025-05-05', end: '2025-05-10' },
+                    { title: 'Thanksgiving Sunday', start: '2025-06-01' },
+                    { title: 'Mid-Year Fasting & Prayer', start: '2025-07-01', end: '2025-07-07' },
+                    { title: 'Holy Ghost Night', start: '2025-08-02' },
+                    { title: 'Workers Meeting', start: '2025-09-12' },
+                    { title: 'Christmas Service', start: '2025-12-25' },
+                    { title: 'Crossover Night', start: '2025-12-31' }
+                ]
+            });
+
+            calendar.render();
+        });
+    </script>
+
+    
+
+</body>
+</html>
